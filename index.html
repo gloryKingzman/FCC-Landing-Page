@@ -6,12 +6,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <title>Landing Page</title>
 </head>
 
 <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 
     <header id="header">
         <div class="logo">
@@ -19,8 +20,14 @@
                 <img src="/images/apple logo.png" alt="apple logo" id="header-img">
             </a>
         </div>
-        <nav id="nav-bar">
-            <ul>
+        <nav id="nav-bar" class="nav-bar">
+            <div class="toggle">
+                <a href="javascript:void(0);" class="menu" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            </li>
+            <ul class="navmenu" id="navBar">
                 <li><a href="#buy" class="nav-link">Buy</a></li>
                 <li><a href="#review" class="nav-link">Review</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -119,9 +126,18 @@
             </form>
             </div>
         </footer>
-        <script src=" https: //cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" </script></script>
     </main>
-
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navBar");
+            if (x.className === "navmenu") {
+                x.className += " responsive";
+            } else {
+                x.className = "navmenu";
+            }
+        }
+    </script>
 </body>
 
 
