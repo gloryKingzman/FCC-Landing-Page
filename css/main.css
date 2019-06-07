@@ -7,6 +7,7 @@ body {
     font-family: 'Rubik', 'sans-serif';
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 header {
@@ -18,6 +19,13 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+}
+
+@media screen and (max-width: 1090px) {
+    header {
+        background-attachment: scroll;
+        background-position: center;
+    }
 }
 
 .logo {
@@ -35,13 +43,19 @@ img#header-img {
 #nav-bar {
     background: white;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 3;
     /*box-shadow: 0 0 10px 5px rgba(184, 182, 182, 0.3);*/
+}
+
+@media screen and (max-width: 694px) {
+    #nav-bar {
+        display: none;
+    }
 }
 
 #nav-bar ul {
@@ -68,34 +82,48 @@ li {
 
 /* Background image*/
 
+.header-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 div#main-bg {
-    /*background: white;*/
-    /*  background-image: url(/images/iphone1.png);*/
-    background-attachment: scroll;
-    background-position: center;
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    bottom: 0;
-    left: 40px;
+    /* background: white; */
+    /* background-image: url(/images/iphone1.png); */
+    /* background-attachment: scroll; */
+    /* background-position: center; */
+    width: 600px;
+    /* height: 500px; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 40px; */
     z-index: 1;
 }
 
 .iphone-bg {
-    width: 50vw;
-    position: absolute;
-    bottom: 0;
-    left: 40px;
+    width: 100%;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 40px; */
     z-index: 1;
 }
 
 .main-tag {
+    margin-top: 5%;
     width: 500px;
-    position: absolute;
-    top: 20%;
-    right: 200px;
+    /* position: absolute; */
+    /* top: 40%; */
+    /* right: 170px; */
     z-index: 1;
-    text-align: center;
+    /* text-align: center; */
+    align-items: center;
+    text-align: right;
+    /* align-self: center; */
 }
 
 .main-tag:hover {
@@ -106,7 +134,8 @@ div#main-bg {
 
 #tag {
     font-family: 'Open Sans', 'Rubik', sans-serif;
-    font-size: 7em;
+    font-size: 6em;
+    margin-top: 0;
     padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -116,6 +145,27 @@ div#main-bg {
     font-weight: 200;
     padding-top: 0;
     margin-top: 0;
+    font-size: 2em;
+}
+
+
+/*Media Qury for hewader*/
+
+@media screen and (max-width: 1090px) {
+    .main-tag {
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    #tag {
+        font-size: 5em;
+    }
+    #tag-desc {
+        font-size: 2em;
+    }
 }
 
 
@@ -134,7 +184,7 @@ div#main-bg {
 .review-container {
     position: relative;
     height: 800px;
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -191,7 +241,7 @@ div#main-bg {
     /*position: absolute;*/
     top: 50%;
     left: 30px;
-    z-index: 5;
+    z-index: 2;
     text-align: center;
     flex-shrink: 1;
 }
@@ -322,3 +372,23 @@ ul>li>a {
     padding: 5px 10px;
     border: none;
 }
+
+@media screen and (max-width: 694px) {
+    .input-field {
+        width: 80%;
+    }
+    #submit {
+        margin-top: 10px;
+    }
+}
+
+
+/*Whitespace issue solution*/
+
+
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
